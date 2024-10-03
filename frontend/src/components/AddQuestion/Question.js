@@ -39,7 +39,7 @@ function Question() {
 
         }
 
-         axios.post('/api/question', bodyJSON).then((res) => {
+         axios.post('https://stack-hubbackend.vercel.app/api/question', bodyJSON).then((res) => {
             alert("Question added successfully")
             setLoading(false)
             history('/')
