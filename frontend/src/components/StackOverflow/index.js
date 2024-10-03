@@ -10,7 +10,7 @@ function Index(){
 
     useEffect (() => {
         async function getQuestion(){
-            await axios.get('/api/question').then((res) => {
+            await axios.get('https://stack-hubbackend.vercel.app/api/question').then((res) => {
                 console.log(res.data)
                 setQuestions(res.data.reverse())
                }).catch((err) => {
