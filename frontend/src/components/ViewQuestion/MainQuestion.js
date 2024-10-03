@@ -28,7 +28,7 @@ function MainQuestion() {
 
     useEffect(() => {
         async function getQuestionDetails() {
-            await axios.get(`/api/question/${id}`).then((res) => {
+            await axios.get(`https://stack-hubbackend.vercel.app/api/question/${id}`).then((res) => {
                 setQuestionData(res.data[0])
             }).catch((err) => {
                 console.log(err)
@@ -38,7 +38,7 @@ function MainQuestion() {
     }, [id])
 
     async function getUpdatedAnswer() {
-        await axios.get(`/api/question/${id}`).then((res) => {
+        await axios.get(`https://stack-hubbackend.vercel.app/api/question/${id}`).then((res) => {
             setQuestionData(res.data[0])
         }).catch((err) => console.log(err));
 
@@ -60,7 +60,7 @@ function MainQuestion() {
                 user:user
             }
 
-            await axios.post('/api/answer',body,config).then((res) => {
+            await axios.post('https://stack-hubbackend.vercel.app/api/answer',body,config).then((res) => {
                 console.log(res.data)
                 alert("Answer added successfully")
                 setAnswer("")
@@ -81,7 +81,7 @@ function MainQuestion() {
                 user:user
             }
 
-            await axios.post(`/api/comment/${id}`,body).then((res) => {
+            await axios.post(`https://stack-hubbackend.vercel.app/api/comment/${id}`,body).then((res) => {
                 console.log(res.data)
                 setComment(" ")
                 setShow(false)
