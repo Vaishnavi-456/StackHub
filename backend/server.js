@@ -6,9 +6,13 @@ const app = express()
 const db = require('./db')
 const router = require('./routers')
 
-
+app.use(cors({
+  origin: 'https://your-frontend-url.vercel.app', // Replace with your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json())
-app.use(cors())
+
 
 
 
