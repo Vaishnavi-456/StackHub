@@ -7,7 +7,7 @@ const db = require('./db')
 const router = require('./routers')
 
 app.use(cors({
-  origin: 'https://your-frontend-url.vercel.app', // Replace with your Vercel frontend URL
+  origin: 'https://stack-hubbackend.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
