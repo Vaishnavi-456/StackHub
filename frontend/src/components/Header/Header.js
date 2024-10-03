@@ -26,7 +26,7 @@ function Header(){
 
   //   const fetchQuestions = async() => {
   //     try{
-  //       const response = await axios.get('/api/question')
+  //       const response = await axios.get('https://stack-hubbackend.vercel.app/api/question')
   //       setQuestions(response.data);
   //     }catch(error) {
   //       console.error("error in fetching questions", error);
