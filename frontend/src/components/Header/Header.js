@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import {auth} from '../../firebase'
 import {Link} from "react-router-dom"
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 
 function Header(){
   const user = useSelector(selectUser);
